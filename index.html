@@ -52,13 +52,13 @@
 	var mask = document.getElementsByClassName("mask")[0];
 	var p = mask.getElementsByTagName("p")[0];
 	
-	var imgArr = ["1.jpg","1.jpg"];
+
 
 	var imgNum = 0;
 	//对图片地址进行for循环预加载
-	for(var i = 0;i<imgArr.length;i++){
+	for(var i = 0;i<imgs.length;i++){
 		var image = new Image();        //Image是js的HTML对象
-		image.src = imgArr[i];   //先把地址给缓存起来
+		image.src = imgs[i].getAttribute("data-src");   //先把地址给缓存起来
 
 		image.onload = function(){     //当一张图片缓存成功的时候,数量就会加1
 			imgNum++;
@@ -66,7 +66,7 @@
 			if(imgNum == imgArr.length){
 				mask.style.display = "none";
 				//当图片的地址都缓存好了，之后for循环再把img图片地址还原，用img的data-src来还原,不能放在外面，要不以来就加载好了
-				for(var j = 0;j<imgArr.length;j++){
+				for(var j = 0;j<imgs.length;j++){
 					imgs[j].src = imgs[j].getAttribute("data-src");
 				}
 			}
