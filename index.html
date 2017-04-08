@@ -17,15 +17,17 @@
 			left: 0;
 			top: 0;
 			background-color: #000;
-			opacity: 0.5;
+			/*opacity: 0.5;*/
 			width: 100%;
 			height: 100%;
+			text-align: center;
 		}
 		.mask p{
+			width: 100%;
 			position: fixed;
 			font-size: 6rem;
 			color: #fff;
-			left: 35%;
+			/*text-align: center;*/
 			top:40%;
 		}
 		.wrap img{
@@ -63,8 +65,8 @@
 
 		image.onload = function(){     //当一张图片缓存成功的时候,数量就会加1
 			imgNum++;
-			p.innerText = parseInt(imgNum/imgArr.length)*100 + "%";
-			if(imgNum == imgArr.length){
+			p.innerText = parseInt(imgNum/imgs.length)*100 + "%";
+			if(imgNum == imgs.length){
 				mask.style.display = "none";
 				//当图片的地址都缓存好了，之后for循环再把img图片地址还原，用img的data-src来还原,不能放在外面，要不以来就加载好了
 				for(var j = 0;j<imgs.length;j++){
