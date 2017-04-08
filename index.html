@@ -22,7 +22,7 @@
 			height: 100%;
 		}
 		.mask p{
-			
+			position: fixed;
 			font-size: 6rem;
 			color: #fff;
 			left: 35%;
@@ -43,14 +43,7 @@
 	<div class="wrap">		
 		<img src="" alt="" data-src="1.jpg"/>
 		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>
-		<img src="" alt="" data-src="1.jpg"/>		
+				
 	</div>
 </body>
 <script type="text/javascript">
@@ -59,7 +52,7 @@
 	var mask = document.getElementsByClassName("mask")[0];
 	var p = mask.getElementsByTagName("p")[0];
 	
-	var imgArr = ["1.jpg","1.jpg","1.jpg","1.jpg","1.jpg","1.jpg","1.jpg","1.jpg","1.jpg","1.jpg"];
+	var imgArr = ["1.jpg","1.jpg"];
 
 	var imgNum = 0;
 	//对图片地址进行for循环预加载
